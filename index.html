@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TaskFlow</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header id="head">
+      <a class="app-name" href="/">Kanban</a>
+      <div class="search-container">
+        <div class="icon"></div>
+        <!-- <label for="search-bar"></label> -->
+        <input id="search-bar" type="search"
+          placeholder="Try searching tasks" />
+      </div>
+      <div class="head-buttons-group">
+        <div class="share-container">
+          <div class="icon"></div>
+          <button id="share-btn" type="button">Share</button>
+        </div>
+        <button id="config-btn" class="icon-btn round" type="button"></button>
+        <button id="notifications-btn" class="icon-btn round"
+          type="button"></button>
+        <button id="account" class="icon-btn round" type="button">
+          <img class="profile-pic" src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original" alt="profile-picture">
+        </button>
+      </div>
+    </header>
+
+    <nav id="nav-bar">
+      <div class="nav-container">
+        <label class="nav-items" for="nav-board-btn">
+          <input
+            id="nav-board-btn"
+            class="nav-btn"
+            type="radio"
+            name="nav"
+            value="boards"
+            checked />
+          Boards
+        </label>
+
+        <label class="nav-items" for="nav-board-pages">
+          <input
+            id="nav-board-pages"
+            class="nav-btn"
+            type="radio"
+            name="nav"
+            value="pages" />
+          Pages
+        </label>
+
+        <label class="nav-items" for="nav-board-settings">
+          <input
+            id="nav-board-settings"
+            class="nav-btn"
+            type="radio"
+            name="nav"
+            value="settings" />
+          Settings
+        </label>
+      </div>
+    </nav>
+
+    <main id="body-container">
+      <div id="board-head">
+        <h2 class="board-title">Board Title</h2>
+        <button class="fav-btn" type="button"></button>
+      </div>
+
+      <div id="board-body">
+
+        <section class="status-item">
+          <div class="status-head">
+            <div class="status-subitem">
+              <h3 class="status-title">Column Title</h3>
+              <div class="tasks-amount">3</div>
+            </div>
+
+            <button class="add-task" type="button">+</button>
+          </div>
+
+          <div class="task-container">
+
+            <article class="task-item">
+
+              <div class="task-tags-container">
+                <div class="task-tag">Tag-01</div>
+                <div class="task-tag">Tag-02</div>
+                <div class="task-tag">Tag-03</div>
+              </div>
+
+              <h4 class="task-title">Task Nº 1</h4>
+
+              <div class="task-collaborators-container">
+                <div class="task-collaborator-icon"></div>
+                <div class="task-collaborator-icon"></div>
+              </div>
+
+              <p class="task-start-date">15 Ago 2026</p>
+            </article>
+
+            <article class="task-item">
+
+              <div class="task-tags-container">
+                <div class="task-tag">Tag-04</div>
+              </div>
+
+              <h4 class="task-title">Task Nº 2</h4>
+
+              <div class="task-collaborators-container">
+                <div class="task-collaborator-icon"></div>
+                <div class="task-collaborator-icon"></div>
+                <div class="task-collaborator-icon"></div>
+              </div>
+
+              <p class="task-start-date">20 Nov 2026</p>
+            </article>
+
+            <article class="task-item">
+
+              <div class="task-tags-container">
+                <div class="task-tag">Tag-05</div>
+                <div class="task-tag">Tag-06</div>
+              </div>
+
+              <h4 class="task-title">Task Nº 3</h4>
+
+              <div class="task-collaborators-container">
+                <div class="task-collaborator-icon"></div>
+              </div>
+
+              <p class="task-start-date">25 Dec 2026</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="status-item">
+
+          <div class="status-head">
+            <div class="status-subitem">
+              <h3 class="status-title">Column Title 2</h3>
+              <div class="tasks-amount">1</div>
+            </div>
+
+            <button class="add-task" type="button">+</button>
+          </div>
+
+          <div class="task-container">
+
+            <article class="task-item">
+
+              <div class="task-tags-container">
+                <div class="task-tag">Tag-0X</div>
+              </div>
+
+              <h4 class="task-title"></h4>
+
+              <div class="task-collaborators-container">
+                <div class="task-collaborator-icon"></div>
+              </div>
+              
+              <p class="task-start-date">XX XXX XXXX</p>
+            </article>
+
+          </div>
+
+        </section>
+
+        <section class="status-item">
+          <div class="status-head">
+            <div class="status-subitem">
+              <h3 class="status-title">Column Title</h3>
+              <div class="tasks-amount">2</div>
+            </div>
+            <button class="add-task" type="button">+</button>
+          </div>
+
+          <div class="task-container">
+
+            <article class="task-item">
+              <div class="task-tags-container">
+                <div class="task-tag">Tag-0X</div>
+                <div class="task-tag">Tag-0X</div>
+              </div>
+
+              <h4 class="task-title"></h4>
+
+              <div class="task-collaborators-container">
+                <div class="task-collaborator-icon"></div>
+                <div class="task-collaborator-icon"></div>
+              </div>
+
+              <p class="task-start-date">XX XXX XXXX</p>
+            </article>
+
+            <article class="task-item">
+
+              <div class="task-tags-container">
+                <div class="task-tag">Tag-0X</div>
+                <div class="task-tag">Tag-0X</div>
+                <div class="task-tag">Tag-0X</div>
+                <div class="task-tag">Tag-0X</div>
+              </div>
+
+              <h4 class="task-title"></h4>
+
+              <div class="task-collaborators-container">
+                <div class="task-collaborator-icon"></div>
+                <div class="task-collaborator-icon"></div>
+                <div class="task-collaborator-icon"></div>
+              </div>
+
+              <p class="task-start-date">XX XXX XXXX</p>
+            </article>
+
+          </div>
+
+        </section>
+
+      </div>
+    </main>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
