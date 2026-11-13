@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="pt-BR">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,32 +11,40 @@
   </head>
   <body>
     <header id="head">
-      <button id="menu-btn" class="icon-btn" type="button">
-        <span class="icon light material-symbols-outlined">
+      <button id="menu-btn" class="icon-btn" type="button"
+        aria-label="Open menu" aria-controls="nav-bar" aria-expanded="false">
+        <span class="icon light material-symbols-outlined" aria-hidden="true">
           menu
         </span>
       </button>
       <h1 class="app-name"><a href="/">Kanban</a></h1>
       <div class="search-container">
-        <button id="search-btn" class="icon-btn" type="button">
-          <span class="icon light material-symbols-outlined">search</span>
+        <button id="search-btn" class="icon-btn" type="button"
+          aria-label="Search">
+          <span class="icon light material-symbols-outlined"
+            aria-hidden="true">search</span>
         </button>
-        <!-- <label for="search-bar"></label> -->
         <input id="search-bar" type="search"
+          aria-label="Search tasks"
           placeholder="Try searching tasks" />
       </div>
       <div class="head-buttons-group">
         <button id="share-btn" class="share-container" type="button">
-          <span class="icon dark material-symbols-outlined">share</span>
+          <span class="icon dark material-symbols-outlined"
+            aria-hidden="true">share</span>
           <p>Share</p>
         </button>
-        <button id="config-btn" class="icon-btn round" type="button"><span
-            class="icon light material-symbols-outlined">settings</span></button>
+        <button id="config-btn" class="icon-btn round" type="button"
+          aria-label="Settings"><span
+            class="icon light material-symbols-outlined"
+            aria-hidden="true">settings</span></button>
         <button id="notifications-btn" class="icon-btn round"
-          type="button"><span
-            class="icon light material-symbols-outlined">notifications</span></button>
-        <button id="account-btn" class="icon-btn round" type="button">
-          <span class="icon light material-symbols-outlined">
+          type="button" aria-label="Notifications"><span
+            class="icon light material-symbols-outlined"
+            aria-hidden="true">notifications</span></button>
+        <button id="account-btn" class="icon-btn round" type="button"
+          aria-label="My account">
+          <span class="icon light material-symbols-outlined" aria-hidden="true">
             person
           </span>
 
@@ -47,12 +55,12 @@
       </div>
     </header>
 
-    <div id="sidebar-backdrop"></div>
+    <div id="sidebar-backdrop" aria-hidden="true"></div>
 
-    <nav id="nav-bar">
+    <nav id="nav-bar" aria-label="Main navigation">
       <div class="nav-container">
         <label class="nav-items" for="nav-board-btn">
-          <span class="icon light material-symbols-outlined">
+          <span class="icon light material-symbols-outlined" aria-hidden="true">
             view_kanban
           </span>
           <input
@@ -66,7 +74,7 @@
         </label>
 
         <label class="nav-items" for="nav-board-pages">
-          <span class="icon light material-symbols-outlined">
+          <span class="icon light material-symbols-outlined" aria-hidden="true">
             draft
           </span>
           <input
@@ -79,7 +87,7 @@
         </label>
 
         <label class="nav-items" for="nav-board-settings">
-          <span class="icon light material-symbols-outlined">
+          <span class="icon light material-symbols-outlined" aria-hidden="true">
             settings
           </span>
           <input
@@ -96,21 +104,23 @@
     <main id="body-container">
       <div id="board-head">
         <h2 class="board-title">Board Title</h2>
-        <button class="icon-btn" type="button">
-          <span class="icon light material-symbols-outlined">star</span>
+        <button class="icon-btn" type="button" aria-label="Add board to favorites">
+          <span class="icon light material-symbols-outlined"
+            aria-hidden="true">star</span>
         </button>
       </div>
 
       <div id="board-body">
 
-        <section class="status-item">
+        <section class="status-item" aria-labelledby="column-title-1">
           <div class="status-head">
             <div class="status-subitem">
-              <h3 class="status-title">Column Title</h3>
+              <h3 class="status-title" id="column-title-1">Column Title</h3>
               <div class="tasks-amount">3</div>
             </div>
 
-            <button class="add-task" type="button">+</button>
+            <button class="add-task" type="button"
+              aria-label="Add task to column Column Title">+</button>
           </div>
 
           <div class="task-container">
@@ -123,14 +133,14 @@
                 <div class="task-tag">Tag-03</div>
               </div>
 
-              <h4 class="task-title">Task Nº 1</h4>
+              <h4 class="task-title">Task No. 1</h4>
 
               <div class="task-collaborators-container">
-                <div class="task-collaborator-icon"></div>
-                <div class="task-collaborator-icon"></div>
+                <div class="task-collaborator-icon" aria-hidden="true"></div>
+                <div class="task-collaborator-icon" aria-hidden="true"></div>
               </div>
 
-              <p class="task-start-date">15 Ago 2026</p>
+              <p class="task-start-date">Aug 15, 2026</p>
             </article>
 
             <article class="task-item">
@@ -139,15 +149,15 @@
                 <div class="task-tag">Tag-04</div>
               </div>
 
-              <h4 class="task-title">Task Nº 2</h4>
+              <h4 class="task-title">Task No. 2</h4>
 
               <div class="task-collaborators-container">
-                <div class="task-collaborator-icon"></div>
-                <div class="task-collaborator-icon"></div>
-                <div class="task-collaborator-icon"></div>
+                <div class="task-collaborator-icon" aria-hidden="true"></div>
+                <div class="task-collaborator-icon" aria-hidden="true"></div>
+                <div class="task-collaborator-icon" aria-hidden="true"></div>
               </div>
 
-              <p class="task-start-date">20 Nov 2026</p>
+              <p class="task-start-date">Nov 20, 2026</p>
             </article>
 
             <article class="task-item">
@@ -157,26 +167,27 @@
                 <div class="task-tag">Tag-06</div>
               </div>
 
-              <h4 class="task-title">Task Nº 3</h4>
+              <h4 class="task-title">Task No. 3</h4>
 
               <div class="task-collaborators-container">
-                <div class="task-collaborator-icon"></div>
+                <div class="task-collaborator-icon" aria-hidden="true"></div>
               </div>
 
-              <p class="task-start-date">25 Dec 2026</p>
+              <p class="task-start-date">Dec 25, 2026</p>
             </article>
           </div>
         </section>
 
-        <section class="status-item">
+        <section class="status-item" aria-labelledby="column-title-2">
 
           <div class="status-head">
             <div class="status-subitem">
-              <h3 class="status-title">Column Title 2</h3>
+              <h3 class="status-title" id="column-title-2">Column Title 2</h3>
               <div class="tasks-amount">1</div>
             </div>
 
-            <button class="add-task" type="button">+</button>
+            <button class="add-task" type="button"
+              aria-label="Add task to column Column Title 2">+</button>
           </div>
 
           <div class="task-container">
@@ -187,26 +198,27 @@
                 <div class="task-tag">Tag-0X</div>
               </div>
 
-              <h4 class="task-title"></h4>
+              <h4 class="task-title" aria-hidden="true"></h4>
 
               <div class="task-collaborators-container">
-                <div class="task-collaborator-icon"></div>
+                <div class="task-collaborator-icon" aria-hidden="true"></div>
               </div>
 
-              <p class="task-start-date">XX XXX XXXX</p>
+              <p class="task-start-date">MMM DD, YYYY</p>
             </article>
 
           </div>
 
         </section>
 
-        <section class="status-item">
+        <section class="status-item" aria-labelledby="column-title-3">
           <div class="status-head">
             <div class="status-subitem">
-              <h3 class="status-title">Column Title</h3>
+              <h3 class="status-title" id="column-title-3">Column Title</h3>
               <div class="tasks-amount">2</div>
             </div>
-            <button class="add-task" type="button">+</button>
+            <button class="add-task" type="button"
+              aria-label="Add task to column Column Title">+</button>
           </div>
 
           <div class="task-container">
@@ -217,14 +229,14 @@
                 <div class="task-tag">Tag-0X</div>
               </div>
 
-              <h4 class="task-title"></h4>
+              <h4 class="task-title" aria-hidden="true"></h4>
 
               <div class="task-collaborators-container">
-                <div class="task-collaborator-icon"></div>
-                <div class="task-collaborator-icon"></div>
+                <div class="task-collaborator-icon" aria-hidden="true"></div>
+                <div class="task-collaborator-icon" aria-hidden="true"></div>
               </div>
 
-              <p class="task-start-date">XX XXX XXXX</p>
+              <p class="task-start-date">MMM DD, YYYY</p>
             </article>
 
             <article class="task-item">
@@ -236,15 +248,15 @@
                 <div class="task-tag">Tag-0X</div>
               </div>
 
-              <h4 class="task-title"></h4>
+              <h4 class="task-title" aria-hidden="true"></h4>
 
               <div class="task-collaborators-container">
-                <div class="task-collaborator-icon"></div>
-                <div class="task-collaborator-icon"></div>
-                <div class="task-collaborator-icon"></div>
+                <div class="task-collaborator-icon" aria-hidden="true"></div>
+                <div class="task-collaborator-icon" aria-hidden="true"></div>
+                <div class="task-collaborator-icon" aria-hidden="true"></div>
               </div>
 
-              <p class="task-start-date">XX XXX XXXX</p>
+              <p class="task-start-date">MMM DD, YYYY</p>
             </article>
 
           </div>
