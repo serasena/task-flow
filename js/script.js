@@ -8,7 +8,7 @@ const mobileViewport = window.matchMedia("(width < 800px)");
 syncSidebarAccessibility();
 menuBtn.addEventListener("click", toggleSidebar);
 backdropEl.addEventListener("click", closeSidebar);
-mobileViewport.addEventListener("change", syncSidebarAccessibility);
+mobileViewport.addEventListener("change", () => { syncSidebarAccessibility(); closeSidebar() });
 navItemsEl.forEach((item) => {
     item.addEventListener("click", closeSidebar);
 });
@@ -43,6 +43,10 @@ function syncSidebarAccessibility() {
     const isHidden = mobileViewport.matches
         && !document.body.classList.contains("sidebar-open");
 
-    sidebarEl.setAttribute("aria-hidden", isHidden);
+    if (isHidden && sidebarEl.contains(document.activeElement)) {
+        menuBtn.focus();
+    }
+
     sidebarEl.inert = isHidden;
+    sidebarEl.setAttribute("aria-hidden", isHidden);
 }
